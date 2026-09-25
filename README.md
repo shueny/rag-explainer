@@ -1,18 +1,35 @@
 # RAG 3D Process Animation
 
-An animated 3D walkthrough of how Retrieval-Augmented Generation (RAG) works, compared with an LLM answering without RAG.
+An animated 3D walkthrough of how Retrieval-Augmented Generation (RAG) works. It follows one question through the whole pipeline and compares the answer from an LLM without RAG against the answer with RAG, which can be traced back to its source.
 
-- `index.html` — 繁體中文版
-- `en.html` — English version
+一個用 3D 動畫說明 RAG（檢索增強生成）運作流程的網頁，並比較有 RAG 與沒有 RAG 時 LLM 的回答差異。
 
-Both files are self-contained (all scripts, styles and fonts inlined), so they open offline by double-click.
+## Live demo
 
-## Controls
-- Play / Pause (or Space)
+- 繁體中文版: https://shueny.github.io/rag-explainer/
+- English version: https://shueny.github.io/rag-explainer/en.html
+
+## Screenshots
+
+![RAG 3D animation, English version](assets/rag-en.png)
+
+![RAG 3D 動畫，繁體中文版](assets/rag-zh.png)
+
+## Features
+
+- Six steps: Prepare, Embed, Ask, Retrieve, Augment, Generate
+- Side-by-side result: an answer without a source vs. an answer backed by a cited document
+- Play / Pause (or press Space)
 - Previous / Next section
-- EN / 中文 toggle (keeps the current time)
+- EN / 中文 toggle that keeps the current playback time
+- Works offline: open the HTML file directly in a browser
 
-## Publish with GitHub Pages
-1. Put `index.html`, `en.html` and this README in your repo (root or `/docs`).
-2. Repo → Settings → Pages → Deploy from branch → pick the branch and folder.
-3. Open `https://<user>.github.io/<repo>/`.
+## Tech
+
+Each page is a single self-contained HTML file. All scripts, styles and fonts are inlined, so there is no build step and no external dependency.
+
+## Files
+
+- `index.html`: 繁體中文版
+- `en.html`: English version
+- `assets/`: screenshots used in this README
